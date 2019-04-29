@@ -27,6 +27,8 @@ def test_flips(result):
             sum += result[0][i]
     except IndexError:
         print("An error occurred. Did you run 100 trials?")
+    except:
+        print("An error occured. Please try again.")
     else:
         if abs(sum - 50) < 10:
             print("Congratulations, that looks like a random coin flip. You got " + str(sum) + " tails and " + str(100 - sum) + " heads.")
