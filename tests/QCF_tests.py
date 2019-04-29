@@ -22,10 +22,13 @@ def test_flips(result):
 
     sum = 0
 
-    for i in result[0]:
-        sum += i
-
-    if abs(sum - 50) < 10:
-        print("Congratulations, that looks like a random coin flip. You got " + str(sum) + " tails and " + str(100 - sum) + " heads.")
+    try:
+        for i in range(100):
+            sum += result[0][i]
+    except IndexError:
+        print("An error occurred. Did you run 100 trials?")
     else:
-        print("oops, those statistics don't look right... I could just be that you got a disproportionately high number of heads or tails though. Try a couple more times.")
+        if abs(sum - 50) < 10:
+            print("Congratulations, that looks like a random coin flip. You got " + str(sum) + " tails and " + str(100 - sum) + " heads.")
+        else:
+            print("oops, those statistics don't look right... I could just be that you got a disproportionately high number of heads or tails though. Try a couple more times.")
