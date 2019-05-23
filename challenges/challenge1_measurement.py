@@ -2,10 +2,26 @@ from pyquil import Program
 from pyquil.api import get_qc
 from pyquil.gates import H, MEASURE
 
+import os, inspect, sys
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+# sys.path.insert(0,parentdir)
+# sys.path.insert(0, 'tests/')
+# sys.path.append("..")
+print(sys.path)
+# print(dir('tests/'))
+#  import *
+# from tests import *
+from quhacked.tests import test_challenge_measurement
+
+from  test_challenge_measurement import test_meas_outcome
+
+
 """
 Implement a Hadamard gate on qubits [0, 1] of 
 3q-qvm and measure ONLY these two qubits 100 times
 """
+
 qvm_name = '3q-qvm'
 as_qvm_value = True
 num_shots = 100
@@ -42,6 +58,7 @@ def measurement_1(qvm_name, as_qvm_value, num_shots):
 
 results_1 = measurement_1(qvm_name, as_qvm_value, num_shots)
 print(results_1)
+test_meas_outcome(results_1)
 
 """
 Implement a Hadamard gates on the first two available 
