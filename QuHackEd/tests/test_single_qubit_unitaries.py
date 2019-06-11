@@ -69,14 +69,13 @@ def test_plus_input_to_zero(prog):
             print(state)
             print("Perhaps an alternative unitary would work?\n")
 
-def test_minus_input_to_zero(prog):
+def test_minus_input_to_one(prog):
 
     wf_sim = WavefunctionSimulator()
 
     with local_qvm():
         
         state = wf_sim.wavefunction(prog)
-        dir(prog)
         amp = 1
 
         if abs(state[0].real - amp) < 0.0001:

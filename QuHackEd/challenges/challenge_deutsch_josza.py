@@ -51,4 +51,4 @@ qc = get_qc('6q-qvm')
 
 qubits = qc.qubits()
 
-circuit += X(qubits[-1]) #
+circuit += X(qubits[-1]) #Flip ancilla qubit

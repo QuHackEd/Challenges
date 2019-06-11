@@ -67,4 +67,4 @@ print(circuit._instructions)
 circuit += H(0)
 circuit += X(0)
 
-test_minus_input_to_zero(circuit)
+test_minus_input_to_one(circuit)
