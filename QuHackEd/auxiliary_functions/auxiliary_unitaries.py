@@ -19,3 +19,14 @@ def minus_prep():
     state += H(0)
     
     return state
+
+
+def two_qubit_prod_prep(theta):
+    state = Program()
+    if not isinstance(theta, float):
+        raise TypeError('Theta must be a real valued float')
+    
+    state += RY(theta, 0)
+    state += H(1)
+    
+    return state
