@@ -1,6 +1,7 @@
 from pyquil.api import WavefunctionSimulator, local_qvm
 import math
 import numpy as np
+
 def test_bit_flip_unitary(prog):
 
     wf_sim = WavefunctionSimulator()
