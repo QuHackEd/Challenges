@@ -11,6 +11,12 @@ def plus_prep():
 
     return state
 
+def one_prep():
+    state = Program()
+
+    state += X(0)
+
+    return state
 
 def minus_prep():
     state = Program()
