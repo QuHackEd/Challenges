@@ -21,7 +21,7 @@ def define_noisy_cliffords(circuit, p):
     gate_definition_X = DefGate('NOISY_X', corrupted_X, [p])
     NOISY_X = gate_definition_X.get_constructor()
     
-    gate_definition_Z = DefGate('NOISY_Z', corrupted_Z)
+    gate_definition_Z = DefGate('NOISY_Z', corrupted_Z, [1])
     NOISY_Z = gate_definition_Z.get_constructor() 
     
     gate_definition_H = DefGate('NOISY_H', corrupted_H, [p])
