@@ -6,9 +6,7 @@ import os, inspect, sys
 
 def plus_prep():
     state = Program()
-
     state += H(0)
-
     return state
 
 def one_prep():
