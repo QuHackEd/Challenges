@@ -143,7 +143,6 @@ def test_one_phase(prog):
 def test_pi_three_phase(prog):
     
     wf_sim = WavefunctionSimulator()
-    print('This is happening')
     with local_qvm():
         if len(prog._instructions) == 0:
             print("Hmm, I'm not sure you have any gates applied to the state. Better add some..") 
