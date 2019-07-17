@@ -12,8 +12,7 @@ def test_bit_flip_unitary(prog):
         else:    
             state = wf_sim.wavefunction(prog)
 
-            amp = 1
-            if abs(state[1].real - amp) < 0.0001:
+            if abs(state[1].real - 1) < 0.0001:
                 print("\nCongratulations, you built the state:")
                 print(state)
             else:
@@ -63,10 +62,7 @@ def test_plus_input_to_zero(prog):
             print("Hmm, I'm not sure you have any gates applied to the state. Better add some..") 
         else:    
             state = wf_sim.wavefunction(prog)
-
-            amp = 1
-
-            if abs(state[0].real - amp) < 0.0001:
+            if abs(state[0].real - 1) < 0.0001:
                 print("\nExcellent! You built the state:")
                 print(state)
 
@@ -86,9 +82,7 @@ def test_minus_input_to_zero(prog):
         else:    
             state = wf_sim.wavefunction(prog)
 
-            amp = 1
-
-            if abs(state[0].real - amp) < 0.0001:
+            if abs(state[0].real - 1) < 0.0001:
                 print("\nExcellent! You built the state:")
                 print(state)
 
@@ -160,15 +154,3 @@ def test_pi_three_phase(prog):
                 print("\nHmm, you built the state:")
                 print(state)
                 print("Maybe try a different gate?\n")
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
